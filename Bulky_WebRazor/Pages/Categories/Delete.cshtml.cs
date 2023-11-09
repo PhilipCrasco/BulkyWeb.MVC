@@ -30,6 +30,7 @@ namespace Bulky_WebRazor.Pages.Categories
          
                 var categories = _context.Categories.FirstOrDefault(x => x.Id == Category.Id);
 
+                TempData["success"] = "Category deleted successfully";
                 _context.Remove(categories);
                 _context.SaveChangesAsync();
                 return RedirectToPage("Index");

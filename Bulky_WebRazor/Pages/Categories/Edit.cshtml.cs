@@ -23,17 +23,16 @@ namespace Bulky_WebRazor.Pages.Categories
 
         public IActionResult OnPost()
         {
-            //if (category.Name == category.Display_Order.ToString())  //Custom modelstate validation
-            //{
-            //    ModelState.AddModelError("Name", "The DisplayOrder cannot be exactly match the Name");
-            //}
+            if (Category.Name == Category.Display_Order.ToString())  //Custom modelstate validation
+            {
+                ModelState.AddModelError("Category.Name", "The DisplayOrder cannot be exactly match the Name");
+            }
 
             if (ModelState.IsValid)
             {
 
-
                 _context.Update(Category);
-                //TempData["success"] = "Category update successfully";
+                TempData["success"] = "Category update successfully";
                 _context.SaveChanges();
                 return RedirectToPage("Index");
 

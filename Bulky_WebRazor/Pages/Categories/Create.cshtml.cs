@@ -31,6 +31,7 @@ namespace Bulky_WebRazor.Pages.Categories
                 Display_Order = category.Display_Order
             };
 
+            TempData["success"] = "Category created successfully";
             _context.Categories.Add(categories);
             _context.SaveChanges();
 
