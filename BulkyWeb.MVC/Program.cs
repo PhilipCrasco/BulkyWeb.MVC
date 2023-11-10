@@ -1,4 +1,6 @@
-using BulkyWeb.MVC.Context;
+using Bulky.DataAccess.Repository;
+using Bulky.DataAccess.Repository.IRepository;
+using BulkyWeb.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,8 @@ builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("DevConnection");
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer(connectionString).UseSnakeCaseNamingConvention());
+
+builder.Services.AddScoped<ICategoryRepository , CategoryRepository>();
 
 var app = builder.Build();
 
