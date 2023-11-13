@@ -3876,6 +3876,36 @@
         "dependencies": {
           "jQuery": "1.6.3"
         }
+      },
+      "Bulky.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Bulky.Models": "1.0.0",
+          "EFCore.NamingConventions": "7.0.2",
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.10"
+        },
+        "compile": {
+          "bin/placeholder/Bulky.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bulky.DataAccess.dll": {}
+        }
+      },
+      "Bulky.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Bulky.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bulky.Models.dll": {}
+        }
       }
     }
   },
@@ -11269,10 +11299,21 @@
         "toastr.2.1.1.nupkg.sha512",
         "toastr.nuspec"
       ]
+    },
+    "Bulky.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../Bulky.DataAccess/Bulky.DataAccess.csproj",
+      "msbuildProject": "../Bulky.DataAccess/Bulky.DataAccess.csproj"
+    },
+    "Bulky.Models/1.0.0": {
+      "type": "project",
+      "path": "../Bulky.Models/Bulky.Models.csproj",
+      "msbuildProject": "../Bulky.Models/Bulky.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Bulky.DataAccess >= 1.0.0",
       "EFCore.NamingConventions >= 7.0.2",
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
@@ -11311,7 +11352,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\Bulky.DataAccess\\Bulky.DataAccess.csproj": {
+              "projectPath": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\Bulky.DataAccess\\Bulky.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

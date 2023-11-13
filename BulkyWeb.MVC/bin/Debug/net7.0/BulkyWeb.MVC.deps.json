@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "BulkyWeb.MVC/1.0.0": {
         "dependencies": {
+          "Bulky.DataAccess": "1.0.0",
           "EFCore.NamingConventions": "7.0.2",
           "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.Design": "7.0.13",
@@ -2518,6 +2519,26 @@
         "dependencies": {
           "jQuery": "1.6.3"
         }
+      },
+      "Bulky.DataAccess/1.0.0": {
+        "dependencies": {
+          "Bulky.Models": "1.0.0",
+          "EFCore.NamingConventions": "7.0.2",
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.10"
+        },
+        "runtime": {
+          "Bulky.DataAccess.dll": {}
+        }
+      },
+      "Bulky.Models/1.0.0": {
+        "runtime": {
+          "Bulky.Models.dll": {}
+        }
       }
     }
   },
@@ -4101,6 +4122,16 @@
       "sha512": "sha512-h/688XvzYk1xVYn213ryU+HCElE4n/drYzAHJkAi9LsSUPS3EbI6wGlvCglBUt7i4h5iESgAVarYaigjQmVpqg==",
       "path": "toastr/2.1.1",
       "hashPath": "toastr.2.1.1.nupkg.sha512"
+    },
+    "Bulky.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Bulky.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
