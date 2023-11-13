@@ -1,4 +1,5 @@
-﻿using BulkyWeb.MVC.Models;
+﻿using Bulky.Models.Model;
+using BulkyWeb.MVC.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BulkyWeb.DataAccess.Context
@@ -9,6 +10,7 @@ namespace BulkyWeb.DataAccess.Context
         public DataContext(DbContextOptions<DataContext>options ) : base(options) { }
 
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
 
     }
