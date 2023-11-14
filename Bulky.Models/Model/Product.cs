@@ -1,5 +1,6 @@
 ﻿using BulkyWeb.Models.Model;
 using BulkyWeb.MVC.Models;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -43,10 +44,14 @@ namespace Bulky.Models.Model
         [Range(1, 1000)]
         public decimal Price500 { get; set; }
 
-        
+        [ValidateNever]
         public virtual Category Category { get; set; }
-        public int ? CategoryId { get; set; }
 
+
+        [ForeignKey("CategoryId")]
+        public int  CategoryId { get; set; }
+
+        [ValidateNever]
         public string ImageUrl { get; set; }
 
     }
