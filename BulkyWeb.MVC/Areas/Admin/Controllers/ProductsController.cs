@@ -13,14 +13,16 @@ namespace BulkyWeb.MVC.Areas.Admin.Controllers
     {
       
         private readonly IUnitofWork _unitofwork;
-        public ProductsController(IUnitofWork unitofwork)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public ProductsController(IUnitofWork unitofwork, IWebHostEnvironment webHostEnvironment)
         {
             _unitofwork = unitofwork;
+            _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {
  
-            List<Product> product = _unitofwork.Products.GetAll().ToList();
+            List<Product> product = _unitofwork.Products.GetAll(includeProperties: "Category").ToList();
             IEnumerable<SelectListItem> CategoryList = _unitofwork.Category.GetAll()
                 .Select(x => new SelectListItem
                 {
@@ -82,9 +84,41 @@ namespace BulkyWeb.MVC.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
 
-                _unitofwork.Products.Add(productVM.Product);
+                string wwwRoothPath = _webHostEnvironment.WebRootPath;
+                if(file != null)
+                {
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    var productPath = Path.Combine(wwwRoothPath, @"images\product");
+
+                    if(!string.IsNullOrEmpty (productVM.Product.ImageUrl))
+                    {
+                        var oldimagePath = 
+                            Path.Combine(wwwRoothPath, productVM.Product.ImageUrl.TrimStart('\\'));
+
+                        if(System.IO.File.Exists (oldimagePath))
+                        {
+                            System.IO.File.Delete (oldimagePath);
+                        }
+                    }
+
+                    using (var fileStream = new FileStream(Path.Combine(productPath , fileName),FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                    productVM.Product.ImageUrl = @"\images\product\" + fileName;
+                }
+
+                if(productVM.Product.Id == 0)
+                {
+                    _unitofwork.Products.Add(productVM.Product);
+                }
+                else
+                {
+                   _unitofwork.Products.Update(productVM.Product);
+                }
+
                 _unitofwork.Save();
-                TempData["success"] = "Products created successfully";   
+                TempData["success"] = "Transaction created/updates successfully";   
                  return  RedirectToAction("Index");
 
             }

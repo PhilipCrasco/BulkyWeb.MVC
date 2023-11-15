@@ -41,18 +41,18 @@
                     <th>
                         Author
                     </th>
-                      <th>
+@*                      <th>
                         ListPrice
-                    </th>
+                    </th>*@
                     <th>
                         Price
                     </th>
-                    <th>
+@*                    <th>
                         Price50
                     </th>
                     <th>
                          Price500
-                    </th>
+                    </th>*@
                     <th>
                         Category
                     </th>
@@ -74,8 +74,8 @@
                         <td>
                             @item.Title
                         </td>
-                        <td>
-                            @item.Description
+                        <td >
+                             @Html.Raw(item.Description)        
                         </td>
                         <td>
                             @item.ISBN
@@ -83,18 +83,18 @@
                         <td>
                             @item.Author
                         </td>
-                        <td>
+@*                        <td>
                             @item.ListPrice
-                        </td>
+                        </td>*@
                         <td>
                             @item.Price
                         </td>
-                        <td>
+@*                        <td>
                             @item.Price50
                         </td>
                         <td>
                             @item.Price500
-                        </td>
+                        </td>*@
                         <td>
                             @item.Category.Name
                         </td>
