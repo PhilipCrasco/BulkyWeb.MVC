@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JT38656Rgox7YFq0PUhyY2b4KN2Ch8K0+hKcJh6cbps=",
+  "Hash": "/oM8WaX6AHq55qVAQK8cbKHEHcE6/QzA4rckBfe0AP4=",
   "Source": "BulkyWeb.MVC",
   "BasePath": "_content/BulkyWeb.MVC",
   "Mode": "Default",
@@ -102,6 +102,23 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\16f7d18c-d3c8-4852-b1bc-d7cc8f3775a8.jpg"
     },
     {
+      "Identity": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\images\\product\\618310e6-3939-4f72-972a-c135c9b218ea.jpg",
+      "SourceId": "BulkyWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/BulkyWeb.MVC",
+      "RelativePath": "images/product/618310e6-3939-4f72-972a-c135c9b218ea.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\618310e6-3939-4f72-972a-c135c9b218ea.jpg"
+    },
+    {
       "Identity": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\images\\product\\7fd4fdd5-45ac-441c-92ea-6d8a78336344.jpg",
       "SourceId": "BulkyWeb.MVC",
       "SourceType": "Discovered",
@@ -117,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\7fd4fdd5-45ac-441c-92ea-6d8a78336344.jpg"
+    },
+    {
+      "Identity": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\images\\product\\bdebbeb5-dbd7-480b-85d2-f847a97311f2.png",
+      "SourceId": "BulkyWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/BulkyWeb.MVC",
+      "RelativePath": "images/product/bdebbeb5-dbd7-480b-85d2-f847a97311f2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\bdebbeb5-dbd7-480b-85d2-f847a97311f2.png"
     },
     {
       "Identity": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\images\\product\\e351ae45-04a0-4cac-98ab-4cb3417e0ea3.png",
@@ -153,6 +187,23 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\fa0a4343-b4b0-4543-b9c9-418ac681495c.jpg"
     },
     {
+      "Identity": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\images\\product\\fe59492e-3624-4729-be25-ecdc88bdd382.png",
+      "SourceId": "BulkyWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/BulkyWeb.MVC",
+      "RelativePath": "images/product/fe59492e-3624-4729-be25-ecdc88bdd382.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\fe59492e-3624-4729-be25-ecdc88bdd382.png"
+    },
+    {
       "Identity": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\images\\product\\fedb2474-2bef-48a1-83a9-dba28bf2b6a5.jpg",
       "SourceId": "BulkyWeb.MVC",
       "SourceType": "Discovered",
@@ -168,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\fedb2474-2bef-48a1-83a9-dba28bf2b6a5.jpg"
+    },
+    {
+      "Identity": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\js\\product.js",
+      "SourceId": "BulkyWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/BulkyWeb.MVC",
+      "RelativePath": "js/product.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\product.js"
     },
     {
       "Identity": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\BulkyWeb.MVC\\wwwroot\\js\\site.js",

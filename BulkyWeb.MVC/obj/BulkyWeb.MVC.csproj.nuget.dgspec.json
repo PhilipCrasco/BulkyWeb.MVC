@@ -210,6 +210,10 @@
               "target": "Package",
               "version": "[7.0.2, )"
             },
+            "HtmlSanitizer": {
+              "target": "Package",
+              "version": "[8.0.746, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.13, )"

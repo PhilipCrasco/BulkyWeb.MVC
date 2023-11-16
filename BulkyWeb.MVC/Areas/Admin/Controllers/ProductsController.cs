@@ -2,6 +2,7 @@
 using Bulky.Models.Model;
 using Bulky.Models.ViewModel;
 using BulkyWeb.MVC.Models;
+using Ganss.Xss;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -84,16 +85,16 @@ namespace BulkyWeb.MVC.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
 
-                string wwwRoothPath = _webHostEnvironment.WebRootPath;
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
                 if(file != null)
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    var productPath = Path.Combine(wwwRoothPath, @"images\product");
+                    var productPath = Path.Combine(wwwRootPath, @"images\product");
 
                     if(!string.IsNullOrEmpty (productVM.Product.ImageUrl))
                     {
                         var oldimagePath = 
-                            Path.Combine(wwwRoothPath, productVM.Product.ImageUrl.TrimStart('\\'));
+                            Path.Combine(wwwRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
 
                         if(System.IO.File.Exists (oldimagePath))
                         {
@@ -107,6 +108,9 @@ namespace BulkyWeb.MVC.Areas.Admin.Controllers
                     }
                     productVM.Product.ImageUrl = @"\images\product\" + fileName;
                 }
+
+                var sanitizer = new HtmlSanitizer();
+                productVM.Product.Description = sanitizer.Sanitize(productVM.Product.Description);
 
                 if(productVM.Product.Id == 0)
                 {
@@ -141,32 +145,40 @@ namespace BulkyWeb.MVC.Areas.Admin.Controllers
 
 
 
-        public IActionResult Delete(int? id)
+        #region ApiCalls 
+
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            if (id == null || id == 0)
+            List<Product> product = _unitofwork.Products.GetAll(includeProperties: "Category").ToList();
+            return Json(new {data = product});
+        }
+
+
+        [HttpDelete]
+        public IActionResult Delete(int ? id)
+        {
+
+            var productTobeDeleted = _unitofwork.Products.Get(x => x.Id == id);
+            if (productTobeDeleted == null)
             {
-                return NotFound();
+                return Json(new { succes = false, message = "Error while deleting" });
             }
 
-            var product = _unitofwork.Products.Get(x => x.Id == id);
+            var oldimagePath = Path.Combine(_webHostEnvironment.WebRootPath, productTobeDeleted.ImageUrl.TrimStart('\\'));
 
+            if (System.IO.File.Exists(oldimagePath))
+            {
+                System.IO.File.Delete(oldimagePath);
+            }
 
-            return View(product);
-        }
-
-
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePost(int? id)
-        {
-
-            var product = _unitofwork.Products.Get(x => x.Id == id);
-
-            _unitofwork.Products.Remove(product);
-            TempData["success"] = "Products delete successfully";
+            _unitofwork.Products.Remove(productTobeDeleted);
             _unitofwork.Save();
-            return RedirectToAction("Index");
 
+            return Json(new { success = true , message = "Delete Successful" });
         }
+
+        #endregion
 
 
     }
