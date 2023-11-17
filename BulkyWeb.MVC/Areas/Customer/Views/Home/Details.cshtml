@@ -1,4 +1,5 @@
-﻿
+﻿@using Bulky.Models.Model;
+@model Product
 
 <form method="post">
 @*    <input hidden asp-for="@Model.Id"/>*@
@@ -22,7 +23,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-lg-3 offset-lg-1 text-center mb-3">
-
+                        <img src="@Model.ImageUrl" width="100%" height="300px" class="rounded" />
 
                     </div>
                     <div class="col-12 col-lg-6 offset-lg-1">
@@ -35,7 +36,7 @@
                         </div>
                         <div class="row ps-2">
                             <h6 class="text-dark text-opacity-50  pb-2">
-                               
+                              List Price: @Model.ListPrice.ToString("c")
                             </h6>
                         </div>
                         <div class="row text-center ps-2">
@@ -49,7 +50,7 @@
                                 <div class="text-dark text-opacity-50 fw-semibold">51-100</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white border-bottom">
-                                <div class="text-dark text-opacity-50 fw-semibold">100+</div>
+                                <div class="text-dark text-opacity-50 fw-semibold">500+</div>
                             </div>
                         </div>
                         <div class="row text-center ps-2">
@@ -57,17 +58,17 @@
                                 <div>Price</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
-     @*                           <div>@Model.Product.Price.ToString("c")</div>*@
+                                <div>@Model.Price.ToString("c")</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
-                             @*   <div>@Model.Product.Price50.ToString("c")</div>*@
+                                <div>@Model.Price50.ToString("c")</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
-                              @*  <div>@Model.Product.Price100.ToString("c")</div>*@
+                                <div>@Model.Price500.ToString("c")</div>
                             </div>
                         </div>
                         <div class="row pl-2 my-3">
-                          @*  <p class="text-secondary lh-sm">@Html.Raw(Model.Product.Description)</p>*@
+                            <p class="text-secondary lh-sm">@Html.Raw(Model.Description)</p>
                         </div>
                         <div class="row pl-2 mb-3">
                             <div class="col-md-4">

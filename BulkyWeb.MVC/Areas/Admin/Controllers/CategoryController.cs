@@ -1,12 +1,15 @@
 ﻿using Bulky.DataAccess.Repository.IRepository;
+using Bulky.Utility;
 using BulkyWeb.DataAccess.Context;
 using BulkyWeb.MVC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace BulkyWeb.MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
 

@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[7.0.2, )"
             },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.13, )"
@@ -141,9 +145,78 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
               "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\Bulky.Utility\\Bulky.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\Bulky.Utility\\Bulky.Utility.csproj",
+        "projectName": "Bulky.Utility",
+        "projectPath": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\Bulky.Utility\\Bulky.Utility.csproj",
+        "packagesPath": "C:\\Users\\philipcrasco\\.nuget\\packages\\",
+        "outputPath": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\Bulky.Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\philipcrasco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.13, )"
             }
           },
           "imports": [
@@ -192,6 +265,9 @@
             "projectReferences": {
               "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\Bulky.DataAccess\\Bulky.DataAccess.csproj": {
                 "projectPath": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\Bulky.DataAccess\\Bulky.DataAccess.csproj"
+              },
+              "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\Bulky.Utility\\Bulky.Utility.csproj": {
+                "projectPath": "D:\\PhilipLorenz\\FullStack\\BulkyWeb\\Bulky.Utility\\Bulky.Utility.csproj"
               }
             }
           }
@@ -213,6 +289,14 @@
             "HtmlSanitizer": {
               "target": "Package",
               "version": "[8.0.746, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.13, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -248,7 +332,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.11, )"
             },
             "toastr": {
               "target": "Package",
